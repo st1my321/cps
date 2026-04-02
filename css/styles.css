@@ -20,7 +20,7 @@
 * {
 	margin: 0;
 	padding: 0;
-	
+	box-sizing: border-box;
 }
 
 body {
@@ -31,12 +31,12 @@ body {
 
 .upperMenu {
 	display: flex;
-	width: 100 vw;
-	height: 100 vh;
+	width: 100% ;
+	height: 100% ;
 	background-color: #FFFFFF;
 	padding: 24px 16px;
 	gap: 16px;
-	justify-content: space-evenly;
+	justify-content: space-between;
 }
 
 .upperMenu_leftcontainer {
@@ -189,12 +189,12 @@ body {
 }
 
 .mainPaige_info__text {
-	font-size: 14;
+	font-size: 14px;
 	line-height: 18px;
 	letter-spacing: 0.2px;
 	padding: 0px 16px 16px 16px;
 	height: 90px;
-	width: 100%vw;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -220,8 +220,8 @@ body {
 	.upperMenu {
 	display: flex;	
 	align-items: center; 
-	width: 100% vw;
-	height: 100% vh;
+	width: 100% ;
+	height: 100% ;
 	background-color: #FFFFFF;
 	padding: 24px;
 	}
@@ -252,10 +252,6 @@ body {
 	.upperMenu_firstdivider {
 	display: block;
 	margin-right: 20px;
-	}
-
-	.upperMenu_logo {
-	margin-right: 250px;
 	}
 
 	.upperMenu_call {
@@ -383,8 +379,8 @@ body {
 	}
 	
 	.mainPaige_info__expand__picture {
-		width: 100% vw;
-		height: 100% vh;
+		width: 100% ;
+		height: 100% ;
 	}
 
 }
@@ -392,8 +388,8 @@ body {
 @media (min-width: 1120px) {
 
 	.mainPaige {
-		width: 100% vw;
-		height: 100% vh;
+		width: 100% ;
+		height: 100% ;
 	}
 
 	.menu_container__2 {
@@ -404,7 +400,7 @@ body {
 	.mainPaige_title {
 		padding-top: 42px;
 		padding-bottom: 8px;
-		padding-right: 450px;
+		
 		
 	}
 
@@ -470,20 +466,18 @@ body {
 	.mainPaige_slidemenu {
 		width: 1120px;
 		height: 82px;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		padding-left: 32px;
 		padding-right: 25px;
 		padding-bottom: 16px;
 	}
 
 	.mainPaige_info {
-		width: 1060px;
-		height: 307px;
+		width: 100%;
+		height: 100%;
 	}
 
 	.mainPaige_info__text {
-		width: 490px;
-		height: 170px;
 		padding-left: 34px;
 		padding-bottom: 14px;
 		padding-right: 36px;
