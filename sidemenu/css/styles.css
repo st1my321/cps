@@ -1,0 +1,137 @@
+@font-face {
+	font-family: 'TTlakes';
+	src: url('../fonts/TTLakes-Regular.woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'TTlakes';
+	src: url('../fonts/TTLakes-Bold.woff');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'TTlakes';
+	src: url('../fonts/TTLakes-Medium.woff');
+	font-weight: 500;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.sidemenu {
+	display: flex;
+	width: 320px;
+	height: 1024px;
+	flex-direction: column;
+	background-color: #FFFFFF;
+	font-family: 'TTlakes';
+	box-shadow:  16px 0px 52px rgba(14, 24, 80, 0.2), 
+    			 -2px 0px 4px rgba(69, 79, 126, 0.02);
+}
+
+.sidemenu_header {
+	display: flex;
+	justify-content: space-between;
+	gap: 24px;
+	padding-left: 24px;
+	padding-top: 23px;
+	padding-right: 24px;
+}
+
+.sidemenu_header__logo {
+	display: flex;
+	gap: 17px;
+	width: 100%;
+	
+}
+
+.sidemenu_header__logo__cancel {
+	width: 40px;
+	height: 40px;
+}
+
+.sidemenu_header__logo__image {
+width: 97px;
+height: 51px;
+}
+
+.sidemenu_header__search {
+	width: 40px;
+	height: 40px;
+}
+
+.sidemenu_list {
+	display: flex;
+	flex-wrap: wrap;		
+	padding-top: 50px;
+	padding-left: 24px;
+	padding-bottom: 268px;
+}
+
+.sidemenu_list_highlight {
+	transform: translateX(-24px);
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 32px;
+	list-style-type: none;
+}
+
+.sidemenu_footer {
+	display: flex;
+	flex-direction: column;
+	padding-left: 24px;
+	padding-bottom: 32px;
+}
+
+.sidemenu_footer__contacts__buttons {
+	display: flex;
+	gap: 16px;
+	padding-bottom: 16px;
+}
+
+.sidemenu_list__listitem {
+	font-size: 16px;
+	color: #1B1C21;
+	font-weight: 500;
+	line-height: 24px;
+	text-decoration: none;
+}
+
+.sidemenu_list__listitem:hover {
+	color: #7E7E82;
+}
+
+.sidemenu_footer__contacts__phonenumber {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  padding-bottom: 40px;
+}
+
+.sidemenu_footer__contacts__mail{
+	padding-bottom: 12px;
+}
+
+.sidemenu_footer__contacts__mail_link {
+	text-decoration: none;
+	color: #1B1C21;
+}
+
+.lang-link {
+	text-decoration: none;
+	color: #1B1C21;
+}
+
+.lang-link:hover {
+	color: #7E7E82;
+}
