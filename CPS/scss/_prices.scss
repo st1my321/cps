@@ -1,0 +1,101 @@
+@use 'variables' as *;
+
+.prices {
+  &__body {
+    padding: 16px 0 0;
+  }
+
+  &__head {
+    display: none;
+  }
+
+  &__slider {
+    position: relative;
+    width: 100%;
+    padding: 0 16px 34px;
+    overflow: hidden;
+  }
+
+  &__list {
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    width: 240px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 6px;
+    background: $white;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &__item > span {
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: attr(data-label);
+      margin-bottom: 4px;
+      color: $muted;
+      font-weight: 500;
+    }
+  }
+
+  &__item .order-button {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  &__note {
+    max-width: 440px;
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__commercial {
+    display: inline-block;
+    margin: 16px;
+    padding-right: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+
+    span {
+      margin-left: 8px;
+      color: $accent;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+
+.order-button {
+  display: inline-flex;
+  min-width: 119px;
+  height: 32px;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 16px;
+  background: $accent;
+  color: $white;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -.15px;
+  text-transform: uppercase;
+
+  span {
+    font-size: 24px;
+    line-height: 1;
+  }
+}
