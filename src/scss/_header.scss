@@ -1,0 +1,43 @@
+
+
+.mobile-header {
+  display: flex;
+  height: 88px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #d9fff5;
+  background: $white;
+
+  &__group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__logo {
+    width: 97px;
+    height: 51px;
+  }
+
+  &__divider {
+    width: 2px;
+    height: 32px;
+    border-radius: 1px;
+    background: $line;
+  }
+
+  &__divider--left,
+  &__optional {
+    display: none;
+  }
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  background: none;
+  font-weight: 500;
+}

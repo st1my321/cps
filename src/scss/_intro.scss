@@ -1,0 +1,118 @@
+
+
+.intro {
+  padding-top: 24px;
+
+  &__heading-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 16px;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: -.6px;
+  }
+
+  &__title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 40px;
+    border-radius: 0 4px 4px 0;
+    background: $mint;
+  }
+
+  &__desktop-actions {
+    display: none;
+  }
+
+  &__tabs {
+    display: flex;
+    gap: 2px;
+    margin: 24px 0;
+    overflow-x: auto;
+    padding: 0 16px;
+    scrollbar-width: none;
+  }
+
+  &__tab {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    color: $muted;
+    font-weight: 500;
+    line-height: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  &__tab--active,
+  &__tab:hover {
+    border-color: $focus;
+    background: $white;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__copy {
+    padding: 0 16px 16px;
+  }
+
+  &__text-wrap {
+    height: 90px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: .2px;
+    transition: height .25s;
+
+    p + p {
+      margin-top: 20px;
+    }
+
+    &.isOpen {
+      height: auto;
+    }
+  }
+
+  &__more {
+    margin-top: 16px;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+  }
+}
+
+.expand-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.expand-button__image {
+  width: 8px;
+  height: 11px;
+  transition: transform .2s;
+}
+
+.expand-button.isActive .expand-button__image {
+  transform: rotate(180deg);
+}

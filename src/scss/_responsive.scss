@@ -1,0 +1,269 @@
+
+
+@media (min-width: $tablet) {
+  .mobile-header {
+    padding: 0 24px;
+    &__divider--left,
+    &__optional {
+      display: inline-flex;
+    }
+  }
+
+  .intro {
+    &__title {
+      padding-left: 24px;
+    }
+
+    &__tabs {
+      margin: 32px 0;
+      padding: 0 24px;
+    }
+
+    &__about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      padding: 0 24px;
+    }
+
+    &__copy {
+      padding: 0;
+    }
+
+    &__text-wrap {
+      height: 160px;
+      line-height: 20px;
+    }
+
+    &__image {
+      height: 208px;
+      border-radius: 6px;
+    }
+  }
+
+  .section-title {
+    padding-left: 24px;
+  }
+
+  .catalog-section__body,
+  .prices__body {
+    padding: 24px;
+  }
+
+  .catalog-section__slider,
+  .prices__slider {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .brand-list,
+  .device-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px 24px;
+    max-height: 160px;
+    transition: max-height .25s;
+
+    &.isOpen {
+      max-height: 336px;
+    }
+  }
+
+  .brand-list__item,
+  .device-list__item {
+    width: auto;
+  }
+
+  .catalog-section__toggle {
+    display: flex;
+    margin-top: 24px;
+  }
+
+  .catalog-section__slider .swiper-pagination,
+  .prices__slider .swiper-pagination {
+    display: none;
+  }
+
+  .prices {
+    &__head,
+    &__item {
+      display: grid;
+      grid-template-columns: minmax(240px, 1fr) 110px 110px 120px;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__head {
+      padding: 0 24px 16px;
+      color: $muted;
+      font-size: 14px;
+    }
+
+    &__list {
+      display: block;
+      border-radius: 6px;
+      background: $white;
+    }
+
+    &__item {
+      width: auto;
+      height: 64px;
+      padding: 0 24px;
+      border-radius: 0;
+      background: transparent;
+    }
+
+    &__item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 24px;
+      bottom: 0;
+      left: 24px;
+      height: 1px;
+      background: $line;
+    }
+
+    &__item > span {
+      display: block;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__item .order-button {
+      position: static;
+    }
+
+    &__note {
+      padding: 24px 0 0;
+    }
+
+    &__commercial {
+      margin: 16px 0 0;
+    }
+  }
+
+  .site-footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 32px 24px 24px;
+    text-align: left;
+
+    & > *:nth-child(2) {
+      text-align: center;
+    }
+
+    & > *:nth-child(3) {
+      text-align: right;
+    }
+  }
+
+  .modal {
+    padding: 40px 32px;
+  }
+
+  .modal__close {
+    top: 32px;
+    left: -72px;
+  }
+
+  .modal__title::before {
+    left: -32px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .page__layout {
+    display: grid;
+    grid-template-columns: 320px minmax(0, 1120px);
+    max-width: 1440px;
+    margin: 0 auto;
+    background: $bg;
+  }
+
+  .page__content {
+    grid-column: 2;
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    grid-column: 1;
+    grid-row: 1;
+    width: 320px;
+    height: 100vh;
+    transform: none;
+    box-shadow: none;
+
+    &__close {
+      display: none;
+    }
+  }
+
+  .page__overlay,
+  .mobile-header {
+    display: none;
+  }
+
+  .intro {
+    padding-top: 42px;
+
+    &__title {
+      padding-left: 32px;
+    }
+
+    &__desktop-actions {
+      display: flex;
+      gap: 24px;
+      padding-right: 32px;
+    }
+
+    &__tabs {
+      flex-wrap: wrap;
+      margin: 8px 0 16px;
+      padding: 0 32px;
+      overflow: visible;
+    }
+
+    &__about {
+      grid-template-columns: 1fr 532px;
+      gap: 36px;
+      padding: 0 32px;
+    }
+
+    &__image {
+      height: 307px;
+      max-height: none;
+    }
+  }
+
+  .catalog-section,
+  .prices {
+    margin-top: 32px;
+  }
+
+  .section-title {
+    padding-left: 32px;
+  }
+
+  .catalog-section__body,
+  .prices__body {
+    padding: 24px 32px;
+  }
+
+  .brand-list,
+  .device-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .prices__head,
+  .prices__item {
+    grid-template-columns: minmax(360px, 1fr) 180px 180px 120px;
+  }
+
+  .site-footer {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+}
